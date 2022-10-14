@@ -1,5 +1,6 @@
 open Lifting
 open Constr
+open Context
 open Environ
 open Stateutils
 open Caching

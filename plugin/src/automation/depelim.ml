@@ -4,6 +4,7 @@
 
 open Util
 open Constr
+open Context
 open Nameops
 open Declarations
 open Apputils

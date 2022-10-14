@@ -1,5 +1,6 @@
 open Util
 open Constr
+open Context
 open Names
 open Environ
 open Utilities

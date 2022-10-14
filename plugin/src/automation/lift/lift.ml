@@ -20,7 +20,7 @@ open Liftconfig
 open Liftrules
 open Evd
 open Context
-open Contextutils
+(* open Contextutils *)
 open Record
 
 (*

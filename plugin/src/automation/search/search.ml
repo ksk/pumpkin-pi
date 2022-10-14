@@ -5,6 +5,7 @@
 
 open Names
 open Constr
+open Context
 open Environ
 open Utilities
 open Debruijn

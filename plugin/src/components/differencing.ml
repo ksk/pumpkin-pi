@@ -13,7 +13,7 @@ open Inference
 open Apputils
 open Envutils
 open Stateutils
-open Contextutils
+(* open Contextutils *)
 
 (* --- Differencing terms --- *)
 

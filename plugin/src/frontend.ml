@@ -62,6 +62,7 @@ let define_print ?typ n trm sigma =
     CErrors.user_err (str "DEVOID does not fully support implicit arguments")
 
 let suggest_tactic_script env trm_ref opts sigma =
+  let open GlobRef in
   let trm = match trm_ref with
     | VarRef v ->
        mkVar v
@@ -422,6 +423,7 @@ let init_lift ?(hints=[]) env d_orn d_orn_inv sigma =
 let lift_inner ?(suffix=false) ?(opaques=[]) ?(hints=[]) n d_orn d_orn_inv d_old is_lift_module =
   let (sigma, env) = refresh_env() in
   let opaque_terms =
+    let open GlobRef in
     List.map
       (fun r ->
         match Nametab.locate r with
@@ -443,7 +445,7 @@ let lift_inner ?(suffix=false) ?(opaques=[]) ?(hints=[]) n d_orn d_orn_inv d_old
   if isInd u_old then
     let from_typ = fst (on_red_type_default (fun _ _ -> promotion_type_to_types) env sigma l.orn.promote) in
     if not (equal u_old from_typ) then
-      IndRef (lift_inductive_by_ornament env sigma n_new s l c_old opaque_terms is_lift_module)
+      GlobRef.IndRef (lift_inductive_by_ornament env sigma n_new s l c_old opaque_terms is_lift_module)
     else
       lift_definition_by_ornament env sigma n_new l c_old opaque_terms
   else
