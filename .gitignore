@@ -12,6 +12,8 @@
 *.glob
 *.v.d
 *.vo
+*.vok
+*.vos
 *~
 *.d
 *.cmxa
