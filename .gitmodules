@@ -1,8 +1,6 @@
-[submodule "plugin/deps/fix-to-elim"]
-	path = plugin/deps/fix-to-elim
-	url = git@github.com:ksk/fix-to-elim.git
-	branch = 8.11
-[submodule "plugin/src/coq-plugin-lib"]
-	path = plugin/src/coq-plugin-lib
+[submodule "coq-plugin-lib"]
+	path = coq-plugin-lib
 	url = git@github.com:ksk/coq-plugin-lib.git
-	branch = 8.11
+[submodule "fix-to-elim"]
+	path = fix-to-elim
+	url = git@github.com:ksk/fix-to-elim.git
